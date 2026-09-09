@@ -908,14 +908,23 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;div id=&quot;css-gold-trend&quot;&gt;
   &lt;h2&gt;周生生两地足金饰品价格：最近30天&lt;/h2&gt;
   &lt;div class=&quot;viz-row legend&quot; aria-label=&quot;图例&quot;&gt;&lt;button type=&quot;button&quot; data-series=&quot;hk&quot; aria-pressed=&quot;true&quot;&gt;&lt;span class=&quot;swatch hk&quot;&gt;&lt;/span&gt;香港周生生（折合人民币/克）&lt;/button&gt;&lt;button type=&quot;button&quot; data-series=&quot;cn&quot; aria-pressed=&quot;true&quot;&gt;&lt;span class=&quot;swatch cn&quot;&gt;&lt;/span&gt;大陆周生生（人民币/克）&lt;/button&gt;&lt;/div&gt;
-  &lt;section&gt;&lt;h3&gt;挂牌价水平&lt;/h3&gt;&lt;svg id=&quot;price-chart&quot; role=&quot;img&quot; aria-label=&quot;香港与大陆周生生足金饰品每日挂牌价趋势&quot;&gt;&lt;/svg&gt;&lt;/section&gt;
-  &lt;section&gt;&lt;h3&gt;相对走势（8月11日 = 100）&lt;/h3&gt;&lt;svg id=&quot;index-chart&quot; role=&quot;img&quot; aria-label=&quot;两地足金饰品价格相对走势&quot;&gt;&lt;/svg&gt;&lt;/section&gt;
-  &lt;section&gt;&lt;h3&gt;两地价差（大陆 − 香港折算价）&lt;/h3&gt;&lt;svg id=&quot;gap-chart&quot; role=&quot;img&quot; aria-label=&quot;大陆挂牌价减香港折算价的每日价差&quot;&gt;&lt;/svg&gt;&lt;/section&gt;
+  &lt;section class=&quot;analysis-row&quot;&gt;
+    &lt;div class=&quot;chart-pane&quot;&gt;&lt;h3&gt;挂牌价水平&lt;/h3&gt;&lt;svg id=&quot;price-chart&quot; role=&quot;img&quot; aria-label=&quot;香港与大陆周生生足金饰品每日挂牌价趋势&quot;&gt;&lt;/svg&gt;&lt;/div&gt;
+    &lt;aside class=&quot;insight&quot;&gt;&lt;span class=&quot;eyebrow&quot;&gt;9月9日观察&lt;/span&gt;&lt;strong&gt;大陆回落，香港持平&lt;/strong&gt;&lt;p&gt;大陆报 ¥1,317/克，较前一报价下降 ¥19；香港折算约 ¥1,153/克，与前一日持平。&lt;/p&gt;&lt;/aside&gt;
+  &lt;/section&gt;
+  &lt;section class=&quot;analysis-row&quot;&gt;
+    &lt;div class=&quot;chart-pane&quot;&gt;&lt;h3&gt;相对走势（8月11日 = 100）&lt;/h3&gt;&lt;svg id=&quot;index-chart&quot; role=&quot;img&quot; aria-label=&quot;两地足金饰品价格相对走势&quot;&gt;&lt;/svg&gt;&lt;/div&gt;
+    &lt;aside class=&quot;insight&quot;&gt;&lt;span class=&quot;eyebrow&quot;&gt;30天走势&lt;/span&gt;&lt;strong&gt;两地拐点接近，幅度不同&lt;/strong&gt;&lt;p&gt;两地均在8月下旬冲高后回落。香港较8月11日仍高约1.3%，大陆则低约1.4%，大陆波动更明显。&lt;/p&gt;&lt;/aside&gt;
+  &lt;/section&gt;
+  &lt;section class=&quot;analysis-row&quot;&gt;
+    &lt;div class=&quot;chart-pane&quot;&gt;&lt;h3&gt;两地价差（大陆 − 香港折算价）&lt;/h3&gt;&lt;svg id=&quot;gap-chart&quot; role=&quot;img&quot; aria-label=&quot;大陆挂牌价减香港折算价的每日价差&quot;&gt;&lt;/svg&gt;&lt;/div&gt;
+    &lt;aside class=&quot;insight&quot;&gt;&lt;span class=&quot;eyebrow&quot;&gt;价差变化&lt;/span&gt;&lt;strong&gt;最新价差缩小至约 ¥164/克&lt;/strong&gt;&lt;p&gt;较9月8日缩小约 ¥19/克；大陆挂牌价仍比香港折算价高约14.2%。两地佣金和工费口径不同，价差不等于实际可套利空间。&lt;/p&gt;&lt;/aside&gt;
+  &lt;/section&gt;
   &lt;p class=&quot;text-small text-muted note&quot;&gt;香港：港币/两 ÷ 37.5 × 0.8558，含2%佣金；大陆：人民币/克，不含工费。大陆仅在来源发布报价的日期显示观测点。&lt;/p&gt;
   &lt;div class=&quot;tooltip&quot; role=&quot;tooltip&quot; hidden&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;style&gt;
-#css-gold-trend{position:relative;width:100%;color:var(--foreground)}#css-gold-trend h2{margin-bottom:8px}#css-gold-trend h3{margin:18px 0 4px;font-weight:500}#css-gold-trend .legend{gap:18px;margin-bottom:4px}#css-gold-trend .legend button{appearance:none;border:0;background:transparent;color:var(--foreground);padding:4px 0;display:inline-flex;align-items:center;gap:7px;cursor:pointer}#css-gold-trend .legend button[aria-pressed=&quot;false&quot;]{opacity:.42}#css-gold-trend .swatch{width:18px;height:3px;display:inline-block}#css-gold-trend .swatch.hk{background:var(--viz-series-1)}#css-gold-trend .swatch.cn{background:var(--viz-series-2)}#css-gold-trend svg{width:100%;display:block;overflow:visible}#css-gold-trend .frame{fill:transparent;stroke:var(--border)}#css-gold-trend svg text{fill:var(--foreground);font-size:12px}#css-gold-trend .axis-title{fill:var(--muted-foreground)}#css-gold-trend .series-hk{stroke:var(--viz-series-1);fill:none}#css-gold-trend .series-cn{stroke:var(--viz-series-2);fill:none}#css-gold-trend .series-gap{stroke:var(--viz-series-3);fill:none}#css-gold-trend .line{stroke-width:2.2}#css-gold-trend .dot-hk{fill:var(--viz-series-1)}#css-gold-trend .dot-cn{fill:var(--viz-series-2)}#css-gold-trend .dot-gap{fill:var(--viz-series-3)}#css-gold-trend .value-label{font-weight:500;paint-order:stroke;stroke:var(--background);stroke-width:4px;stroke-linejoin:round}#css-gold-trend .guide{stroke:var(--border);pointer-events:none}#css-gold-trend .hit{fill:transparent;cursor:crosshair}#css-gold-trend .note{margin-top:12px}#css-gold-trend .tooltip{position:absolute;z-index:5;pointer-events:none;background:var(--popover);color:var(--popover-foreground);border:1px solid var(--border);padding:8px 10px;border-radius:6px;white-space:nowrap}
+#css-gold-trend{position:relative;width:min(1160px,100%);margin:0 auto;color:var(--foreground)}#css-gold-trend h2{margin-bottom:8px}#css-gold-trend h3{margin:0 0 8px;font-weight:500}#css-gold-trend .legend{gap:18px;margin:0 0 24px}#css-gold-trend .legend button{appearance:none;border:0;background:transparent;color:var(--foreground);padding:4px 0;display:inline-flex;align-items:center;gap:7px;cursor:pointer}#css-gold-trend .legend button[aria-pressed=&quot;false&quot;]{opacity:.42}#css-gold-trend .swatch{width:18px;height:3px;display:inline-block}#css-gold-trend .swatch.hk{background:var(--viz-series-1)}#css-gold-trend .swatch.cn{background:var(--viz-series-2)}#css-gold-trend .analysis-row{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:32px;align-items:center;padding:26px 0;border-top:1px solid var(--border)}#css-gold-trend .chart-pane{min-width:0}#css-gold-trend .insight{background:color-mix(in srgb,var(--viz-series-3) 8%,var(--background));padding:20px;border-left:3px solid var(--viz-series-3)}#css-gold-trend .insight .eyebrow{display:block;color:var(--muted-foreground);margin-bottom:8px}#css-gold-trend .insight strong{display:block;font-weight:500;margin-bottom:8px}#css-gold-trend .insight p{margin:0;color:var(--muted-foreground)}#css-gold-trend svg{width:100%;display:block;overflow:visible}#css-gold-trend .frame{fill:transparent;stroke:var(--border)}#css-gold-trend svg text{fill:var(--foreground);font-size:12px}#css-gold-trend .axis-title{fill:var(--muted-foreground)}#css-gold-trend .series-hk{stroke:var(--viz-series-1);fill:none}#css-gold-trend .series-cn{stroke:var(--viz-series-2);fill:none}#css-gold-trend .series-gap{stroke:var(--viz-series-3);fill:none}#css-gold-trend .line{stroke-width:2.2}#css-gold-trend .dot-hk{fill:var(--viz-series-1)}#css-gold-trend .dot-cn{fill:var(--viz-series-2)}#css-gold-trend .dot-gap{fill:var(--viz-series-3)}#css-gold-trend .value-label{font-weight:500;paint-order:stroke;stroke:var(--background);stroke-width:4px;stroke-linejoin:round}#css-gold-trend .guide{stroke:var(--border);pointer-events:none}#css-gold-trend .hit{fill:transparent;cursor:crosshair}#css-gold-trend .note{margin-top:12px}#css-gold-trend .tooltip{position:absolute;z-index:5;pointer-events:none;background:var(--popover);color:var(--popover-foreground);border:1px solid var(--border);padding:8px 10px;border-radius:6px;white-space:nowrap}@media(max-width:760px){#css-gold-trend .analysis-row{grid-template-columns:1fr;gap:12px;padding:22px 0}#css-gold-trend .insight{padding:16px}#css-gold-trend .legend{gap:8px 16px}}
 &lt;/style&gt;
 &lt;script&gt;
 (()=&gt;{
@@ -1177,28 +1186,3 @@ function draw(){renderPair(&#x27;#price-chart&#x27;,false);renderPair(&#x27;#ind
 "></iframe>
 </body>
 </html>
-
-# 周生生两地金价趋势
-
-一个零依赖的静态网页，用于比较香港与中国大陆周生生足金饰品挂牌价。
-
-## 功能
-
-- 最近 30 天挂牌价趋势
-- 香港价格折算为人民币/克
-- 两地相对走势对比
-- 大陆价格减香港折算价格的每日价差
-- 鼠标悬停查看逐日价格
-- 支持桌面和移动端
-
-## 使用
-
-直接用浏览器打开 `index.html`。部署时可将整个目录发布到 GitHub Pages、GitLab Pages 或任意静态网站托管服务。
-
-## 数据口径
-
-- 香港：港币/两除以 37.5，再乘以 0.8558 港币兑人民币换算率；报价含 2% 佣金，不含工费。
-- 中国大陆：人民币/克，不含工费。
-- 当前版本内嵌 2026-08-11 至 2026-09-09 的历史数据，不会自动联网更新。
-
-数据仅供展示和研究，不构成投资或购买建议。实际交易价格以周生生门店或官方网站为准。
