@@ -1,7 +1,12 @@
 {
-  "updated_at": "2026-09-09",
-  "generated_at": "2026-09-09T13:09:48+00:00",
+  "updated_at": "2026-09-10",
+  "generated_at": "2026-09-10T11:05+08:00",
   "fx_hkd_cny": 0.8558,
+  "fx_rates": {
+    "CNY": 0.8558,
+    "JPY": 19.56,
+    "KRW": 170.5
+  },
   "hk": [
     {
       "date": "2026-08-11",
@@ -260,9 +265,49 @@
       "value": 1317
     }
   ],
+  "jp": [
+    {"date": "2026-08-12", "raw_jpy_g": 24821, "value": 1086.0},
+    {"date": "2026-08-13", "raw_jpy_g": 25143, "value": 1100.1},
+    {"date": "2026-08-14", "raw_jpy_g": 24658, "value": 1078.9},
+    {"date": "2026-08-17", "raw_jpy_g": 24843, "value": 1086.9},
+    {"date": "2026-08-18", "raw_jpy_g": 25155, "value": 1100.6},
+    {"date": "2026-08-19", "raw_jpy_g": 24693, "value": 1080.4},
+    {"date": "2026-08-20", "raw_jpy_g": 25427, "value": 1112.5},
+    {"date": "2026-08-21", "raw_jpy_g": 25571, "value": 1118.8},
+    {"date": "2026-08-24", "raw_jpy_g": 26001, "value": 1137.6},
+    {"date": "2026-08-25", "raw_jpy_g": 26525, "value": 1160.5},
+    {"date": "2026-08-26", "raw_jpy_g": 26339, "value": 1152.4},
+    {"date": "2026-08-27", "raw_jpy_g": 26198, "value": 1146.2},
+    {"date": "2026-08-28", "raw_jpy_g": 26075, "value": 1140.8},
+    {"date": "2026-08-31", "raw_jpy_g": 25417, "value": 1112.1},
+    {"date": "2026-09-01", "raw_jpy_g": 25366, "value": 1109.8},
+    {"date": "2026-09-02", "raw_jpy_g": 24721, "value": 1081.6},
+    {"date": "2026-09-03", "raw_jpy_g": 24820, "value": 1085.9},
+    {"date": "2026-09-04", "raw_jpy_g": 24822, "value": 1086.0},
+    {"date": "2026-09-07", "raw_jpy_g": 24602, "value": 1076.4},
+    {"date": "2026-09-08", "raw_jpy_g": 24178, "value": 1057.8},
+    {"date": "2026-09-09", "raw_jpy_g": 23731, "value": 1038.3},
+    {
+      "date": "2026-09-10",
+      "source_time": "17:00",
+      "raw_jpy_g": 24162,
+      "value": 1057.1
+    }
+  ],
+  "kr": [
+    {
+      "date": "2026-09-09",
+      "source_time": null,
+      "raw_krw_3_75g": 833000,
+      "value": 1115.0
+    }
+  ],
   "sources": {
     "hk": "https://goldpricexpress.com/jewellery_price/css",
     "cn": "https://www.jinjia.com.cn/chowsangsang/history.html",
+    "jp": "https://gold.tanaka.co.jp/commodity/souba/english/index.php",
+    "jp_history": "https://gold.tanaka.co.jp/commodity/souba/d-gold_recent.php",
+    "kr": "https://www.kaggold.com/sub01/sub01.php",
     "fx": "https://open.er-api.com/v6/latest/HKD"
   }
 }

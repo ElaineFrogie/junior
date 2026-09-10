@@ -3,22 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="香港与中国大陆周生生足金饰品每日价格、走势及价差比较">
-  <title>周生生两地金价观察</title>
+  <meta name="description" content="中国大陆、香港、日本和韩国黄金每日价格及价差比较">
+  <title>东亚四地黄金价格观察</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="markets.css">
 </head>
 <body>
   <main class="page">
     <header class="hero">
-      <div><p class="kicker">Gold price monitor</p><h1>周生生两地<br>金价观察</h1><p class="updated"><span class="live-dot"></span>最后数据更新：<time id="updated">加载中</time></p></div>
+      <div><p class="kicker">Gold price monitor</p><h1>东亚四地<br>黄金价格观察</h1><p class="updated"><span class="live-dot"></span>最近抓取：<time id="updated">加载中</time></p><p class="visited">本次页面刷新：<time id="visited"></time></p></div>
       <div class="hero-metric"><span>最新两地价差</span><strong id="latest-gap">--</strong></div>
     </header>
-    <div class="legend" aria-label="图例"><button type="button" data-series="hk" aria-pressed="true"><i class="swatch hk"></i>香港折算价</button><button type="button" data-series="cn" aria-pressed="true"><i class="swatch cn"></i>大陆挂牌价</button></div>
+    <div class="legend" aria-label="图例"><button type="button" data-series="hk" aria-pressed="true"><i class="swatch hk"></i>香港折算价</button><button type="button" data-series="cn" aria-pressed="true"><i class="swatch cn"></i>大陆挂牌价</button><button type="button" data-series="jp" aria-pressed="true"><i class="swatch jp"></i>日本金条折算价</button><button type="button" data-series="kr" aria-pressed="true"><i class="swatch kr"></i>韩国金条折算价</button></div>
     <div id="error" class="error" hidden></div>
-    <section class="analysis"><div class="chart-wrap"><h2>挂牌价水平</h2><p class="sub">统一换算为人民币/克</p><svg id="price-chart" class="skeleton" role="img" aria-label="两地足金饰品每日挂牌价"></svg></div><aside class="insight"><span class="insight-label">最新观察</span><strong id="price-title">读取数据中</strong><p id="price-copy"></p></aside></section>
-    <section class="analysis"><div class="chart-wrap"><h2>相对走势</h2><p class="sub">区间首个共同报价日 = 100</p><svg id="index-chart" class="skeleton" role="img" aria-label="两地金价相对走势"></svg></div><aside class="insight"><span class="insight-label">区间走势</span><strong id="trend-title">读取数据中</strong><p id="trend-copy"></p></aside></section>
+    <section class="analysis"><div class="chart-wrap"><h2>四地最新价格</h2><p class="sub">统一折算为人民币/克；中港为饰品，日本和韩国为24K金条</p><svg id="market-chart" class="skeleton" role="img" aria-label="中国大陆、香港、日本和韩国最新黄金价格比较"></svg></div><aside class="insight"><span class="insight-label">购买成本比较</span><strong id="market-title">读取数据中</strong><p id="market-copy"></p></aside></section>
+    <section class="analysis"><div class="chart-wrap"><h2>四地价格趋势</h2><p class="sub">统一换算为人民币/克；韩国历史从本站启用采集日起累计</p><svg id="price-chart" class="skeleton" role="img" aria-label="中国大陆、香港、日本和韩国每日黄金价格趋势"></svg></div><aside class="insight"><span class="insight-label">最新观察</span><strong id="price-title">读取数据中</strong><p id="price-copy"></p></aside></section>
+    <section class="analysis"><div class="chart-wrap"><h2>四地相对走势</h2><p class="sub">每个市场在当前可用区间的首条数据 = 100</p><svg id="index-chart" class="skeleton" role="img" aria-label="中国大陆、香港、日本和韩国黄金价格相对走势"></svg></div><aside class="insight"><span class="insight-label">区间走势</span><strong id="trend-title">读取数据中</strong><p id="trend-copy"></p></aside></section>
     <section class="analysis"><div class="chart-wrap"><h2>两地价差</h2><p class="sub">大陆挂牌价 − 香港折算价</p><svg id="gap-chart" class="skeleton" role="img" aria-label="两地每日价差"></svg></div><aside class="insight"><span class="insight-label">价差变化</span><strong id="gap-title">读取数据中</strong><p id="gap-copy"></p></aside></section>
-    <p class="footnote">香港价格按港币/两 ÷ 37.5 × 当期港币兑人民币汇率折算；香港报价含2%佣金，大陆报价不含工费。自动采集数据仅供研究，实际交易以品牌官方或门店报价为准。</p>
+    <p class="footnote">香港价格按港币/两 ÷ 37.5 × 当前汇率折算；韩国按韩元/3.75克折算；日本为田中贵金属含税金条零售价。日本近月历史来自官方日次表，韩国官网仅公开当日报价，因此韩国历史从本站启用采集日起逐日累计。中港为品牌足金饰品，日本和韩国为24K金条，产品、税费及工费口径不同。自动采集数据仅供研究，实际交易以当地官方或门店报价为准。</p>
   </main>
   <div id="tooltip" class="tooltip" role="tooltip"></div>
   <script src="site.js"></script>

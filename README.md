@@ -1,6 +1,6 @@
 # 周生生两地金价趋势
 
-一个零依赖的静态网页，用于比较香港与中国大陆周生生足金饰品挂牌价。
+一个零依赖的静态网页，用于比较中国大陆、香港、日本和韩国的黄金购买价格。
 
 ## 功能
 
@@ -8,6 +8,8 @@
 - 香港价格折算为人民币/克
 - 两地相对走势对比
 - 大陆价格减香港折算价格的每日价差
+- 日本田中贵金属24K金条与韩国24K金条最新零售价
+- 四地价格统一折算为人民币/克，并展示相对大陆和香港的价差
 - 鼠标悬停查看逐日价格
 - 支持桌面和移动端
 
@@ -25,7 +27,7 @@ python3 -m http.server 8000
 
 ## 自动更新
 
-GitHub Actions 每天北京时间约 10:30 运行 `scripts/update_prices.py`，抓取两地报价和港币兑人民币汇率，并更新 `data/prices.json`。也可以在仓库的 **Actions → Update gold prices → Run workflow** 手动执行。
+GitHub Actions 每小时检查一次，运行 `scripts/update_prices.py` 抓取四地报价和汇率，并更新 `data/prices.json`。页面每次访问或刷新都会绕过缓存，重新读取最新数据文件；也可以在仓库的 **Actions → Update gold prices → Run workflow** 手动执行。
 
 仓库设置需要允许 Actions 写入：**Settings → Actions → General → Workflow permissions → Read and write permissions**。
 
@@ -33,6 +35,8 @@ GitHub Actions 每天北京时间约 10:30 运行 `scripts/update_prices.py`，�
 
 - 香港：港币/两除以 37.5，再乘以 0.8558 港币兑人民币换算率；报价含 2% 佣金，不含工费。
 - 中国大陆：人民币/克，不含工费。
+- 日本：田中贵金属24K金条含税零售价，日元/克，按当期汇率折算。
+- 韩国：韩国公认黄金交易所24K金条买入价，韩元/3.75克，按当期汇率折算。
 - 页面展示最近约 30 至 40 天数据，并通过 GitHub Actions 每日更新。
 
 数据仅供展示和研究，不构成投资或购买建议。实际交易价格以周生生门店或官方网站为准。

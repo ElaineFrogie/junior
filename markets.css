@@ -1,0 +1,9 @@
+.visited{margin:4px 0 0;color:var(--muted);font-size:12px}
+.market-bar{fill:var(--gold)}
+.market-bar.is-lowest{fill:var(--green)}
+.market-label{fill:var(--ink);font-size:12px}
+.market-value{fill:var(--ink);font-size:12px;font-weight:600}
+:root{--blue:#347a8a;--plum:#85556f}
+.jp{background:var(--blue)}.kr{background:var(--plum)}
+.series-jp{fill:none;stroke:var(--blue);stroke-width:2.4}.series-kr{fill:none;stroke:var(--plum);stroke-width:2.4}
+.dot-jp{fill:var(--blue)}.dot-kr{fill:var(--plum)}
