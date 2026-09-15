@@ -8,3 +8,5 @@
 .series-jp{fill:none;stroke:var(--blue);stroke-width:2.4}.series-kr{fill:none;stroke:var(--plum);stroke-width:2.4}
 .dot-jp{fill:var(--blue)}.dot-kr{fill:var(--plum)}
 .cost-analysis{align-items:start}.table-scroll{margin-top:14px;overflow-x:auto}.cost-table{width:100%;min-width:690px;border-collapse:collapse;font-size:12px}.cost-table th,.cost-table td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}.cost-table th:first-child,.cost-table td:first-child{text-align:left}.cost-table th{color:var(--muted);font-weight:500}.cost-table td:last-child{font-weight:700}.assumption{color:var(--muted)}
+.refresh-data{margin-left:8px;padding:2px 8px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer;font:inherit}.refresh-data:disabled{cursor:wait;opacity:.5}.freshness{margin-left:5px;font-size:12px}.freshness.is-stale{color:var(--red)}.market-dates{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.market-date{padding:4px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:11px;background:rgba(255,250,240,.55)}
+.dot-carried{opacity:.42}

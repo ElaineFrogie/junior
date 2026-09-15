@@ -121,7 +121,7 @@ def merge(old, new, cutoff):
 def main():
     current = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     today = datetime.now(timezone(timedelta(hours=8))).date()
-    cutoff = (today - timedelta(days=40)).isoformat()
+    cutoff = (today - timedelta(days=30)).isoformat()
     rates = current.get("fx_rates", {"CNY": current.get("fx_hkd_cny", 0.8558), "JPY": 19.56, "KRW": 170.5})
     errors = []
     try:
@@ -173,7 +173,8 @@ def main():
     generated = datetime.now(timezone(timedelta(hours=8))).isoformat(timespec="minutes")
     sources = dict(current["sources"])
     sources["jp_history"] = JP_HISTORY_URL
-    output = {"updated_at": latest, "generated_at": generated, "fx_hkd_cny": rates["CNY"], "fx_rates": rates, "hk": hk, "cn": cn, "jp": jp, "kr": kr, "sources": sources}
+    market_updated_at = {code: rows[-1]["date"] for code, rows in (("hk", hk), ("cn", cn), ("jp", jp), ("kr", kr))}
+    output = {"updated_at": latest, "generated_at": generated, "market_updated_at": market_updated_at, "fetch_errors": errors, "fx_hkd_cny": rates["CNY"], "fx_rates": rates, "hk": hk, "cn": cn, "jp": jp, "kr": kr, "sources": sources}
     DATA_FILE.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if errors:
         print("Completed with fallbacks: " + " | ".join(errors))

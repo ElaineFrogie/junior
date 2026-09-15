@@ -4,7 +4,7 @@
 
 ## 功能
 
-- 最近 30 天挂牌价趋势
+- 最近30个自然日逐日趋势；无新报价的日期沿用最近有效价格
 - 香港价格折算为人民币/克
 - 两地相对走势对比
 - 大陆价格减香港折算价格的每日价差
@@ -27,7 +27,9 @@ python3 -m http.server 8000
 
 ## 自动更新
 
-GitHub Actions 每小时检查一次，运行 `scripts/update_prices.py` 抓取四地报价和汇率，并更新 `data/prices.json`。页面每次访问或刷新都会绕过缓存，重新读取最新数据文件；也可以在仓库的 **Actions → Update gold prices → Run workflow** 手动执行。
+GitHub Actions 每30分钟抓取一次四地来源。访客打开页面或点击“重新获取”时，会绕过浏览器缓存读取最近一次采集结果；趋势图仅显示最新30个自然日。由于 GitHub Pages 为静态托管，页面刷新不会直接在访客浏览器中抓取第三方官网，因此实时性通常取决于最近一次工作流运行时间。
+
+工作流运行 `scripts/update_prices.py` 抓取四地报价和汇率，并更新 `data/prices.json`；也可以在仓库的 **Actions → Update gold prices → Run workflow** 手动执行。
 
 仓库设置需要允许 Actions 写入：**Settings → Actions → General → Workflow permissions → Read and write permissions**。
 
@@ -37,6 +39,6 @@ GitHub Actions 每小时检查一次，运行 `scripts/update_prices.py` 抓取�
 - 中国大陆：人民币/克，不含工费。
 - 日本：田中贵金属24K金条含税零售价，日元/克，按当期汇率折算。
 - 韩国：韩国公认黄金交易所24K金条买入价，韩元/3.75克，按当期汇率折算。
-- 页面展示最近约 30 至 40 天数据，并通过 GitHub Actions 每日更新。
+- 页面展示最新30个自然日数据，并通过 GitHub Actions 每30分钟尝试更新。
 
 数据仅供展示和研究，不构成投资或购买建议。实际交易价格以周生生门店或官方网站为准。
